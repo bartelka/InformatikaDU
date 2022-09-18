@@ -1,4 +1,4 @@
-print("Zvol si interval (a,b) ")
+print("Zvol si interval <a,b> ")
 a = int(input("Cislo a: "))
 b = int(input("Cislo b: "))
 if a > b:
