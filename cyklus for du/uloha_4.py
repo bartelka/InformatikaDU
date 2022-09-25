@@ -5,4 +5,4 @@ def sucet_n(n):
     for cis in n:
         vysledok += cis
     return vysledok
-print("Sucet vsetkych cisel od 1 po N je: ",sucet_n(cisla))
+print("Sucet vsetkych cisel od 1 po", koncis, "je: ",sucet_n(cisla))

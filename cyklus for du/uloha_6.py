@@ -10,4 +10,4 @@ def pocet_cisel(n):
             pocet += 1
     return pocet
 interval = "<" + str(zacinter) + "," + str(koninter) + ">"
-print("Pocet cisel z tvojho intervalu ", interval, "je", pocet_cisel(cisla))
+print("Pocet cisel delitelnch 8 z tvojho intervalu ", interval, "je", pocet_cisel(cisla))

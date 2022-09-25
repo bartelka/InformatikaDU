@@ -6,5 +6,5 @@ def delenie_3(n):
         if podiel == 0:
             print(cislo)
     return""
-print("Cisla delitelne od 1 po N su: ")
+print("Cisla delitelne od 1 po", koncis, "su: ")
 print(delenie_3(cisla))

@@ -8,4 +8,4 @@ def suc_parcis(n):
         if podiel == 0:
            sucet +=cislo
     return sucet
-print("Sucet parnych cisel od 1 po N je ", suc_parcis(cisla))
+print("Sucet parnych cisel od 1 po", koncis, "je ", suc_parcis(cisla))

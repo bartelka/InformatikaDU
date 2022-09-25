@@ -6,4 +6,4 @@ def scitanie_cisel(n):
         if i % 2 ==0:
             pocet +=1
     return pocet
-print("Pocet parnych cisel od 1 po N je ", scitanie_cisel(cisla))
+print("Pocet parnych cisel od 1 po", koncis, "je ", scitanie_cisel(cisla))

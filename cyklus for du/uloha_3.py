@@ -7,5 +7,5 @@ def delenie_4a7(n):
         if pod1 == 0 and pod2 ==0:
             print(x)
     return ""
-print("Cisla delitelne 4 a 7 od 1 po N su: ")
+print("Cisla delitelne 4 a 7 od 1 po", koncis, "su: ")
 print(delenie_4a7(cisla))
