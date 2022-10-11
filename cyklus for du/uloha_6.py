@@ -2,7 +2,7 @@ zacinter = int(input("Cislo, kt. bude zacinat tvoj interval: "))
 koninter = int(input("Cislo, kt. bude koncit tvoj interval: "))
 if zacinter > koninter:
     zacinter, koninter = koninter, zacinter
-cisla = list(range(zacinter,koninter))
+cisla = list(range(zacinter,koninter+1))
 def pocet_cisel(n):
     pocet = 0
     for x in n:
