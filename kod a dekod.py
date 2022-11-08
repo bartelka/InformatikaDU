@@ -10,8 +10,8 @@ def kodovanie(retazec:str, kod:str)->str:
                 x = 0
         a = ord(retazec[i])
         b = ord(kd[i])
-        vys = (((a-97)+b)%26)+97
-        vys = chr(vys)
-        novy_retazec += vys
+        vysl = (((a-97)+b)%26)+97
+        vysl = chr(vysl)
+        novy_retazec += vysl
     return novy_retazec
 print(kodovanie("ahoj svet", "kvet"))
