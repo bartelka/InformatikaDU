@@ -1,0 +1,56 @@
+from PIL import Image
+obr = Image.open("obrazok.png")
+obr1 = Image.new("RGB", obr.size, "white")
+
+pixel_out = obr.load()
+pixel_in = obr1.load()
+
+for x in range(0,obr.size[0],2):
+    for y in range(0,obr.size[1],2):
+        pixel_in[x//2, y//2] = pixel_out[x, y]
+
+obr1.save("obraz2.png")
+
+from PIL import Image
+obr = Image.open("obrazok.png")
+obr1 = Image.new("RGB", (obr.size[0]*2,obr.size[1]*2), "white")
+
+pixel_out = obr.load()
+pixel_in = obr1.load()
+
+for x in range(0,obr.size[0]):
+    for y in range(0,obr.size[1]):
+        pixel_in[x*2, y*2] = pixel_out[x, y]
+        pixel_in[x*2+1, y*2] = pixel_out[x, y]
+        pixel_in[x*2+1, y*2+1] = pixel_out[x, y]
+        pixel_in[x*2, y*2+1] = pixel_out[x, y]
+obr1.save("obraz3.png")
+
+from PIL import Image
+obr = Image.open("obrazok.png")
+obr1 = Image.new("RGB", obr.size, "white")
+
+pixel_out = obr.load()
+pixel_in = obr1.load()
+
+for x in range(obr.size[0]):
+    for y in range(obr.size[1]):
+        pixel_in[obr1.size[0]-1-x, y] = pixel_out[x, y]
+
+obr1.save("obraz.png")
+
+from PIL import Image
+obr = Image.open("obrazok.png")
+obr1 = Image.new("RGB", obr.size, "white")
+
+pixel_out = obr.load()
+pixel_in = obr1.load()
+
+for x in range(obr.size[0]):
+    for y in range(obr.size[1]):
+        if x == y:
+            pixel_in[x,y] = pixel_out[x, y]
+        else:
+            pixel_in[y,x] = pixel_out[x, y]
+
+obr1.save("obraz4.png")
