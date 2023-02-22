@@ -1,0 +1,20 @@
+from PIL import Image, ImageOps
+obr = Image.open("obrazok.png")
+obr1 = ImageOps.grayscale(obr)
+pixels = obr1.load()
+
+fw = open("vysledok.txt", "w", encoding = "UTF-8")
+fw.write(str(obr1.size[0])+ " " +str(obr1.size[1])+ "\n")
+
+
+for y in range(obr1.size[1]):
+    for x in range(obr1.size[0]):
+        #TODO: sefovacka, ale pozor, ak mas dlzku 1 pridam nulu
+        x = hex(pixels[x,y])[2:]
+        if len(x) == 1:
+            x = "0" + str(x)
+        fw.write(x + ",")
+    fw.write("\n")
+#skus cierny obrazok
+
+fw.close()
